@@ -105,6 +105,26 @@ export default async function ProductPage({
             {product.description}
           </p>
 
+          {product.colorOptions && product.colorOptions.length > 0 && (
+            <div className="mt-8">
+              <h2 className="text-[12px] font-semibold uppercase tracking-[0.2em] text-charcoal/50">
+                Renk Seçenekleri
+              </h2>
+              <ul className="mt-4 flex flex-wrap gap-5">
+                {product.colorOptions.map((color) => (
+                  <li key={color.name} className="flex flex-col items-center gap-2">
+                    <span
+                      className="h-8 w-8 rounded-full border border-charcoal/15 ring-1 ring-offset-2 ring-transparent"
+                      style={{ backgroundColor: color.hex }}
+                      aria-hidden="true"
+                    />
+                    <span className="text-[11px] text-charcoal/60">{color.name}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           <a
             href={product.externalUrl}
             target="_blank"

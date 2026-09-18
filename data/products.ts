@@ -12,6 +12,11 @@ export interface ProductSpec {
   value: string;
 }
 
+export interface ProductColor {
+  name: string;
+  hex: string;
+}
+
 export interface Product {
   id: number;
   slug: string;
@@ -28,6 +33,7 @@ export interface Product {
   origin: string;
   externalUrl: string;
   featured?: boolean;
+  colorOptions?: ProductColor[];
 }
 
 export const PRODUCTS: Product[] = [
@@ -287,6 +293,35 @@ export const PRODUCTS: Product[] = [
     materials: "Kaşmir, merinos yün",
     origin: "İskoçya'da dokunmuştur",
     externalUrl: "https://example.com/shop/reversible-cashmere-blanket",
+  },
+  {
+    id: 13,
+    slug: "orgu-kedi-salincagi",
+    name: "Örgü Kedi Salıncağı",
+    tagline: "El yapımı örgüyle üretilen, asılabilir bir kedi salıncağı.",
+    description:
+      "Bu kedi salıncağı tamamen el yapımı örgü tekniğiyle üretilmiştir. Yumuşak, dayanıklı iplikle sıra sıra örülen salıncak, kedinizin güvenle sallanmasına ve keyifle dinlenmesine olanak tanır, aynı zamanda evinizin herhangi bir köşesine sıcak bir doku katar.",
+    image: "/products/orgu-kedi-salincagi.svg",
+    price: 175,
+    currency: "TRY",
+    category: "Yatak & Mobilya",
+    specs: [
+      { label: "Malzeme", value: "El yapımı örgü iplik" },
+      { label: "Ölçüler", value: "70 × 45 cm" },
+      { label: "Taşıma kapasitesi", value: "8 kg'a kadar" },
+      { label: "Bakım", value: "Elde yıkayın, gölgede kurutun" },
+    ],
+    materials: "El yapımı örgü iplik, masif ahşap çerçeve",
+    origin: "Türkiye'de el yapımı",
+    externalUrl: "https://example.com/shop/orgu-kedi-salincagi",
+    colorOptions: [
+      { name: "Beyaz", hex: "#F7F6F3" },
+      { name: "Krem", hex: "#E9DFC8" },
+      { name: "Kahverengi", hex: "#7B5B3A" },
+      { name: "Gri", hex: "#B9B7B0" },
+      { name: "Antrasit Gri", hex: "#3A3B3C" },
+      { name: "Siyah", hex: "#1C1A17" },
+    ],
   },
 ];
 
