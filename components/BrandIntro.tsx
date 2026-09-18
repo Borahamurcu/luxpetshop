@@ -10,14 +10,16 @@ export default function BrandIntro() {
   return (
     <section id="story" className="mx-auto max-w-7xl scroll-mt-20 px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-        <div className="relative order-2 aspect-[4/5] overflow-hidden lg:order-1">
-          <Image
-            src="/brand/atelier-story.svg"
-            alt="YIER atölyesini temsil eden bir amblem"
-            fill
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover"
-          />
+        <div className="relative order-2 aspect-square overflow-hidden border border-charcoal/10 bg-white lg:order-1">
+          <div className="absolute inset-10 sm:inset-16">
+            <Image
+              src="/brand/yier-logo.jpg"
+              alt="YIER logosu"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-contain"
+            />
+          </div>
         </div>
 
         <div className="order-1 lg:order-2">
