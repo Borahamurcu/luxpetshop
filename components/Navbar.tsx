@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const links = [
-  { href: "/products", label: "Mağaza" },
+  { href: "/products", label: "Ürünler" },
   { href: "/#categories", label: "Kategoriler" },
   { href: "/#story", label: "Hikayemiz" },
 ];
@@ -33,7 +33,7 @@ export default function Navbar() {
           href="/products"
           className="text-[13px] font-medium uppercase tracking-[0.15em] text-charcoal/70 transition-colors hover:text-bronze sm:hidden"
         >
-          Mağaza
+          Ürünler
         </Link>
       </div>
     </header>

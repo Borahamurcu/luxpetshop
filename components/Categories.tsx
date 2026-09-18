@@ -43,7 +43,7 @@ export default function Categories() {
                     {CATEGORY_DESCRIPTIONS[category]}
                   </p>
                   <p className="mt-4 text-[11px] uppercase tracking-[0.15em] text-charcoal/40">
-                    {count} parça
+                    {count > 0 ? `${count} parça` : "Yakında"}
                   </p>
                 </div>
               </Link>

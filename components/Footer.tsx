@@ -21,7 +21,7 @@ export default function Footer() {
 
         <div>
           <h2 className="text-[12px] font-semibold uppercase tracking-[0.2em] text-bronze-soft">
-            Mağaza
+            Ürünler
           </h2>
           <ul className="mt-4 space-y-3 text-sm">
             {categories.map((category) => (

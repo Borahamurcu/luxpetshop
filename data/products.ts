@@ -3,9 +3,26 @@ export type Category =
   | "Kedi Aksesuarları"
   | "Giyim"
   | "Kaplar & Beslenme"
-  | "Yatak & Mobilya"
   | "Seyahat"
-  | "Bakım";
+  | "Bakım"
+  | "Salıncak"
+  | "Ranza"
+  | "Bombeli"
+  | "Cam Ürünler";
+
+/** Menüde ve filtrelerde gösterilecek sabit kategori sırası — henüz ürünü olmayan kategoriler de dahildir. */
+export const CATEGORIES: Category[] = [
+  "Köpek Aksesuarları",
+  "Kedi Aksesuarları",
+  "Giyim",
+  "Kaplar & Beslenme",
+  "Seyahat",
+  "Bakım",
+  "Salıncak",
+  "Ranza",
+  "Bombeli",
+  "Cam Ürünler",
+];
 
 export interface ProductSpec {
   label: string;
@@ -122,28 +139,6 @@ export const PRODUCTS: Product[] = [
     materials: "Masif ceviz, sırlı taş çömlek",
     origin: "Vermont, ABD'de üretilmiştir",
     externalUrl: "https://example.com/shop/marchetti-walnut-feeding-stand",
-    featured: true,
-  },
-  {
-    id: 5,
-    slug: "ombre-velvet-pet-bed",
-    name: "Ombre Kadife Evcil Hayvan Yatağı",
-    tagline: "Elle boyanmış kadife ile kaplanmış heykelsi bir yatak.",
-    description:
-      "Ombre Yatak, evcil hayvan mobilyalarına couture bir anlayış getirir. Her kılıf, ince bir renk geçişi oluşturmak için elle boyanır, ardından destekleyici bir hafıza köpüğü tabanının üzerine kaplanır. Gizli bir fermuar, iç dolguyu bozmadan kılıfın çıkarılıp temizlenmesine olanak tanır.",
-    image: "/products/ombre-velvet-pet-bed.svg",
-    price: 340,
-    currency: "TRY",
-    category: "Yatak & Mobilya",
-    specs: [
-      { label: "Malzeme", value: "Elle boyanmış kadife, hafıza köpüğü" },
-      { label: "Bedenler", value: "M – XL" },
-      { label: "Kılıf", value: "Çıkarılabilir, elde yıkanır" },
-      { label: "Taban", value: "Kaymaz süet alt yüzey" },
-    ],
-    materials: "Kadife, hafıza köpüğü",
-    origin: "Porto, Portekiz'de üretilmiştir",
-    externalUrl: "https://example.com/shop/ombre-velvet-pet-bed",
     featured: true,
   },
   {
@@ -274,27 +269,6 @@ export const PRODUCTS: Product[] = [
     externalUrl: "https://example.com/shop/rosewood-grooming-brush",
   },
   {
-    id: 12,
-    slug: "reversible-cashmere-blanket",
-    name: "Çift Taraflı Kaşmir Battaniye",
-    tagline: "Kaşmir ve merinos yünden çift taraflı bir örtü.",
-    description:
-      "Bir yüzü kaşmir, diğer yüzü merinos yünden dokunan bu çift taraflı battaniye mevsime göre uyum sağlar. Kontrast tonlu kırbaç dikişli kenarlar terzi işi bir bitiş katar; koltukta olduğu kadar bir kafeste veya taşıma çantasında kullanım için de uygundur.",
-    image: "/products/reversible-cashmere-blanket.svg",
-    price: 198,
-    currency: "TRY",
-    category: "Yatak & Mobilya",
-    specs: [
-      { label: "Malzeme", value: "Kaşmir yüz, merinos yün ters yüz" },
-      { label: "Ölçüler", value: "90 × 70 cm" },
-      { label: "Kenar", value: "Kırbaç dikişi, kontrast iplik" },
-      { label: "Bakım", value: "Sadece kuru temizleme" },
-    ],
-    materials: "Kaşmir, merinos yün",
-    origin: "İskoçya'da dokunmuştur",
-    externalUrl: "https://example.com/shop/reversible-cashmere-blanket",
-  },
-  {
     id: 13,
     slug: "orgu-kedi-salincagi",
     name: "Örgü Kedi Salıncağı",
@@ -304,7 +278,7 @@ export const PRODUCTS: Product[] = [
     image: "/products/orgu-kedi-salincagi.svg",
     price: 175,
     currency: "TRY",
-    category: "Yatak & Mobilya",
+    category: "Salıncak",
     specs: [
       { label: "Malzeme", value: "El yapımı örgü iplik" },
       { label: "Ölçüler", value: "70 × 45 cm" },
@@ -343,7 +317,7 @@ export function getProductsByCategory(category: Category): Product[] {
 }
 
 export function getAllCategories(): Category[] {
-  return Array.from(new Set(PRODUCTS.map((product) => product.category)));
+  return CATEGORIES;
 }
 
 export const CATEGORY_DESCRIPTIONS: Record<Category, string> = {
@@ -351,9 +325,12 @@ export const CATEGORY_DESCRIPTIONS: Record<Category, string> = {
   "Kedi Aksesuarları": "Kedi konforuna özel göğüs tasmaları ve temel ürünler.",
   Giyim: "Serin günler için kaşmir ve yün örgüler.",
   "Kaplar & Beslenme": "Seramik, porselen ve ceviz ağacından yemek parçaları.",
-  "Yatak & Mobilya": "Ev için döşemeli yataklar ve örtüler.",
   Seyahat: "Yolculuk için tasarlanmış yapılandırılmış çantalar.",
   Bakım: "Doğal ahşap ve kıldan yapılmış aletler.",
+  Salıncak: "El yapımı örgüyle üretilen, asılabilir kedi salıncakları.",
+  Ranza: "Kedileriniz için çok katlı, ranza tarzı yatma alanları.",
+  Bombeli: "Bombeli, kubbe formlu kedi yuvaları ve yatakları.",
+  "Cam Ürünler": "Cam yüzeyli, şeffaf tasarım kedi ve köpek ürünleri.",
 };
 
 export function formatPrice(price: number, currency = "TRY"): string {

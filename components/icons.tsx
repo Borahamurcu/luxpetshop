@@ -60,11 +60,46 @@ export function BowlIcon(props: IconProps) {
   );
 }
 
-export function BedIcon(props: IconProps) {
+export function HammockIcon(props: IconProps) {
   return (
     <Base {...props}>
-      <rect x="18" y="48" width="64" height="26" rx="8" />
-      <path d="M18 48 Q18 26 40 26 L60 26 Q82 26 82 48" />
+      <line x1="15" y1="16" x2="85" y2="16" />
+      <line x1="31" y1="16" x2="39" y2="60" />
+      <line x1="69" y1="16" x2="61" y2="60" />
+      <path d="M39 60 Q50 80 61 60" />
+    </Base>
+  );
+}
+
+export function RanzaIcon(props: IconProps) {
+  return (
+    <Base {...props}>
+      <rect x="20" y="18" width="60" height="22" rx="4" />
+      <rect x="20" y="60" width="60" height="22" rx="4" />
+      <line x1="20" y1="40" x2="20" y2="60" />
+      <line x1="80" y1="40" x2="80" y2="60" />
+    </Base>
+  );
+}
+
+export function BombeliIcon(props: IconProps) {
+  return (
+    <Base {...props}>
+      <path d="M20 68 A30 30 0 0 1 80 68" />
+      <line x1="20" y1="68" x2="20" y2="82" />
+      <line x1="80" y1="68" x2="80" y2="82" />
+      <line x1="20" y1="82" x2="80" y2="82" />
+      <path d="M40 82 Q40 64 50 64 Q60 64 60 82" />
+    </Base>
+  );
+}
+
+export function GlassIcon(props: IconProps) {
+  return (
+    <Base {...props}>
+      <rect x="28" y="34" width="44" height="48" rx="8" />
+      <rect x="38" y="17" width="24" height="19" rx="4" />
+      <line x1="28" y1="55" x2="72" y2="55" opacity="0.5" />
     </Base>
   );
 }
@@ -95,7 +130,10 @@ export const CATEGORY_ICONS: Record<
   "Kedi Aksesuarları": CatIcon,
   Giyim: SweaterIcon,
   "Kaplar & Beslenme": BowlIcon,
-  "Yatak & Mobilya": BedIcon,
   Seyahat: ToteIcon,
   Bakım: BrushIcon,
+  Salıncak: HammockIcon,
+  Ranza: RanzaIcon,
+  Bombeli: BombeliIcon,
+  "Cam Ürünler": GlassIcon,
 };
