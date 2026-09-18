@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4EFE6"/>
+      <stop offset="1" stop-color="#ece4d6"/>
+    </linearGradient>
+    <pattern id="lines" width="14" height="14" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="14" stroke="rgba(0,0,0,0.035)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#g)"/>
+  <rect width="1200" height="1500" fill="url(#lines)"/>
+  <rect x="36" y="36" width="1128" height="1428" fill="none" stroke="rgba(169,131,79,0.45)" stroke-width="2"/>
+  <g transform="translate(600,660)">
+    <circle cx="0" cy="0" r="190" fill="none" stroke="rgba(169,131,79,0.45)" stroke-width="1.5"/>
+    <g stroke-linecap="round"><rect x="-24" y="-90" width="48" height="110" rx="20" fill="none" stroke="#A9834F" stroke-width="3"/>
+     <rect x="-46" y="18" width="92" height="66" rx="14" fill="none" stroke="#A9834F" stroke-width="3"/>
+     <line x1="-28" y1="34" x2="-28" y2="70" stroke="#A9834F" stroke-width="2"/>
+     <line x1="0" y1="34" x2="0" y2="70" stroke="#A9834F" stroke-width="2"/>
+     <line x1="28" y1="34" x2="28" y2="70" stroke="#A9834F" stroke-width="2"/></g>
+  </g>
+  <text x="600" y="1160" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="46" fill="#1C1A17" letter-spacing="0.5">Gül Ağacı Bakım Fırçası</text>
+  <text x="600" y="1210" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" letter-spacing="4" fill="#8A6B3F">BAKIM</text>
+</svg>
