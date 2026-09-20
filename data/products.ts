@@ -32,6 +32,8 @@ export interface ProductSpec {
 export interface ProductColor {
   name: string;
   hex: string;
+  /** Bu renge özel ürün fotoğrafı. Belirtilmezse ürünün ana görseli kullanılır. */
+  image?: string;
 }
 
 export interface Product {
@@ -289,7 +291,7 @@ export const PRODUCTS: Product[] = [
     origin: "Türkiye'de el yapımı",
     externalUrl: "https://example.com/shop/orgu-kedi-salincagi",
     colorOptions: [
-      { name: "Beyaz", hex: "#F7F6F3" },
+      { name: "Beyaz", hex: "#F7F6F3", image: "/products/orgu-kedi-salincagi/beyaz.jpg" },
       { name: "Krem", hex: "#E9DFC8" },
       { name: "Kahverengi", hex: "#7B5B3A" },
       { name: "Gri", hex: "#B9B7B0" },
