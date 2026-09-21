@@ -292,11 +292,11 @@ export const PRODUCTS: Product[] = [
     externalUrl: "https://example.com/shop/orgu-kedi-salincagi",
     colorOptions: [
       { name: "Beyaz", hex: "#F7F6F3", image: "/products/orgu-kedi-salincagi/beyaz.jpg" },
-      { name: "Krem", hex: "#E9DFC8" },
-      { name: "Kahverengi", hex: "#7B5B3A" },
-      { name: "Gri", hex: "#B9B7B0" },
+      { name: "Krem", hex: "#E9DFC8", image: "/products/orgu-kedi-salincagi/krem.jpg" },
+      { name: "Kahverengi", hex: "#7B5B3A", image: "/products/orgu-kedi-salincagi/kahverengi.jpg" },
+      { name: "Gri", hex: "#B9B7B0", image: "/products/orgu-kedi-salincagi/gri.jpg" },
       { name: "Antrasit Gri", hex: "#3A3B3C" },
-      { name: "Siyah", hex: "#1C1A17" },
+      { name: "Siyah", hex: "#1C1A17", image: "/products/orgu-kedi-salincagi/siyah.jpg" },
     ],
   },
 ];
